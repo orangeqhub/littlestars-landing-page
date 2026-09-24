@@ -1,0 +1,337 @@
+/* ============================================================
+   ABOUT PAGE + HOME WELCOME TRIM
+   Uses existing design tokens and animation classes.
+   ============================================================ */
+
+/* ---------- Home Welcome trim ---------- */
+.welcome-learn {
+  max-width: 460px;
+  color: var(--text);
+  font-size: 16.5px;
+  margin-bottom: 28px;
+}
+
+.welcome-learn-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ---------- About hero ---------- */
+.about-hero {
+  position: relative;
+  padding: calc(var(--nav-h) + 60px) 0 84px;
+  text-align: center;
+  overflow: hidden;
+  background:
+    radial-gradient(55% 50% at 15% 10%, rgba(250, 176, 72, 0.26), transparent 60%),
+    radial-gradient(50% 45% at 90% 25%, rgba(231, 111, 154, 0.2), transparent 62%),
+    linear-gradient(180deg, #fff7e7 0%, #fcedf2 100%);
+}
+
+.about-hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.about-hero-glow--one {
+  width: 380px;
+  height: 380px;
+  left: -120px;
+  top: 40px;
+  background: radial-gradient(circle, rgba(255, 200, 92, 0.35), transparent 70%);
+}
+
+.about-hero-glow--two {
+  width: 420px;
+  height: 420px;
+  right: -140px;
+  bottom: 20px;
+  background: radial-gradient(circle, rgba(236, 116, 160, 0.34), transparent 70%);
+}
+
+.about-hero-star {
+  position: absolute;
+  opacity: 0.9;
+  animation: twinkle 4.5s ease-in-out infinite;
+}
+
+.about-hero-star--one { top: 34%; left: 9%; }
+.about-hero-star--two { top: 26%; right: 12%; animation-delay: 1s; }
+.about-hero-star--three { bottom: 22%; right: 7%; animation-delay: 2s; }
+
+.about-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 820px;
+}
+
+.about-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 34px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid #ecd9be;
+  border-radius: 999px;
+}
+
+.about-breadcrumb a {
+  color: var(--purple);
+  transition: color 0.25s ease;
+}
+
+.about-breadcrumb a:hover {
+  color: var(--blue-deep);
+}
+
+.about-breadcrumb span[aria-current='page'] {
+  color: var(--ink);
+}
+
+.about-hero-eyebrow {
+  margin-bottom: 22px;
+}
+
+.about-hero-title {
+  font-size: clamp(34px, 4.6vw, 54px);
+  font-weight: 800;
+  line-height: 1.12;
+  margin-bottom: 20px;
+}
+
+.about-hero-sub {
+  max-width: 640px;
+  margin-inline: auto;
+  font-size: 18px;
+  color: var(--text);
+}
+
+/* ---------- About sections ---------- */
+.about-section {
+  padding: 96px 0;
+}
+
+.about-section--soft {
+  background: var(--bg-soft);
+}
+
+.about-section--lilac {
+  background: var(--bg-lilac);
+}
+
+/* ---------- 2-column intro blocks ---------- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 56px;
+}
+
+.about-grid--swap .about-visual {
+  order: 1;
+}
+
+.about-grid--swap .about-copy {
+  order: 2;
+}
+
+.about-heading {
+  margin-bottom: 24px;
+}
+
+.about-copy p {
+  font-size: 16.5px;
+  color: var(--text);
+  margin-bottom: 18px;
+}
+
+/* ---------- About intro lead ---------- */
+.about-lead {
+  font-size: 18.5px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0;
+}
+
+/* ---------- Approach copy block ---------- */
+.about-copy-block {
+  max-width: 820px;
+  margin-inline: auto;
+  text-align: left;
+}
+
+.about-copy-block p {
+  font-size: 16.5px;
+  color: var(--text);
+  margin-bottom: 18px;
+}
+
+.about-copy-block p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Message from the founder ---------- */
+.about-message {
+  position: relative;
+  max-width: 860px;
+  margin-inline: auto;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 48px 46px;
+  box-shadow: var(--shadow-md);
+}
+
+.about-message-icon {
+  position: absolute;
+  top: 36px;
+  right: 42px;
+  color: rgba(122, 79, 200, 0.18);
+  pointer-events: none;
+}
+
+.about-message p {
+  font-size: 16.5px;
+  color: var(--text);
+  margin-bottom: 18px;
+  max-width: 720px;
+}
+
+.about-message p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Image placeholder ---------- */
+.img-placeholder {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(60% 55% at 30% 20%, rgba(250, 176, 72, 0.2), transparent 62%),
+    radial-gradient(55% 50% at 80% 85%, rgba(231, 111, 154, 0.18), transparent 62%),
+    #fcf3e4;
+  border: 2px dashed #e3d3b4;
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  place-items: center;
+  min-height: 260px;
+  padding: 40px 24px;
+}
+
+.img-placeholder-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.img-placeholder-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  color: var(--purple);
+  box-shadow: var(--shadow-sm);
+}
+
+.img-placeholder-label {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--ink);
+}
+
+.img-placeholder-note {
+  font-size: 13.5px;
+  color: var(--muted);
+}
+
+/* ---------- About CTA ---------- */
+.about-cta {
+  padding-top: 10px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 992px) {
+  .about-section {
+    padding: 84px 0;
+  }
+
+  .about-grid {
+    gap: 40px;
+  }
+
+  .about-message {
+    padding: 42px 36px;
+  }
+
+  .about-message-icon {
+    top: 30px;
+    right: 32px;
+  }
+
+  .about-hero {
+    padding-top: calc(var(--nav-h) + 44px);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid--swap .about-visual {
+    order: 2;
+  }
+
+  .about-grid--swap .about-copy {
+    order: 1;
+  }
+
+  .about-lead {
+    font-size: 17.5px;
+  }
+
+  .about-message {
+    padding: 38px 28px;
+  }
+
+  .about-message-icon {
+    top: 24px;
+    right: 26px;
+  }
+}
+
+@media (max-width: 520px) {
+  .about-lead {
+    font-size: 17px;
+  }
+
+  .about-message {
+    padding: 32px 22px;
+  }
+
+  .about-message-icon {
+    top: 20px;
+    right: 20px;
+  }
+
+  .about-hero-sub {
+    font-size: 17px;
+  }
+}
